@@ -159,30 +159,7 @@ public class Robot extends TimedRobot {
     directionL=setpoint;
     directionR=setpoint;
    
-		// { if (3>m_gyro.getYComplementaryAngle() && m_gyro.getYComplementaryAngle() > -3) {  
-    //   directionL=0; 
-    //   directionR=0;
-    //  autolevelingage = !autolevelingage;}
-    //  else if (40.5>= m_gyro.getYComplementaryAngle() && m_gyro.getYComplementaryAngle() >= 3) 
-    //  { directionL=-.35;
-    //   directionR=-.35;
-    //   autolevelingage = !autolevelingage;}
-    //   //else if (20.5>= m_gyro.getYComplementaryAngle() && m_gyro.getYComplementaryAngle() >= 10.5) 
-    //   //{ tankDrive.tankDrive(-.35,-.35); 
-    //  //  autolevelingage = !autolevelingage;} 
-    //    //else if (-20.5<= m_gyro.getYComplementaryAngle() && m_gyro.getYComplementaryAngle() <= -10.5) 
-    //    //{ tankDrive.tankDrive(.4,.4);  
-    //    // autolevelingage = !autolevelingage;}
-        
-    //   else if (-40.5<= m_gyro.getYComplementaryAngle() && m_gyro.getYComplementaryAngle() <= -6) {  
-    //     directionL=.35; 
-    //     directionR=.35;
-    //   autolevelingage = !autolevelingage;}
-     // else if (-7.5<m_gyro.getYComplementaryAngle()){ tankDrive.tankDrive(-.7,-.7); 
-      //  autolevelingage = !autolevelingage;}
-       // else if (10000< m_gyro.getYComplementaryAngle()&& m_gyro.getYComplementaryAngle()<100000)
-       //   {tankDrive.tankDrive(0,0);
-        //chargelevel = !chargelevel; }
+
         SmartDashboard.putNumber("robotangle", m_gyro.getYComplementaryAngle());
         SmartDashboard.putNumber("turnangle", m_gyro.getAngle());
         
@@ -248,31 +225,6 @@ public class Robot extends TimedRobot {
       }else {
         SmartDashboard.putString("chargelevel", "false");
         }
-       {
-          //{ if (3.5>m_gyro.getYComplementaryAngle() && m_gyro.getYComplementaryAngle() > -3.5) {  
-            //tankDrive.tankDrive(0,0); 
-           //autolevelingage = !autolevelingage;}
-           //else if (140.5>= m_gyro.getYComplementaryAngle() && m_gyro.getYComplementaryAngle() >= 3.5) 
-           //{ tankDrive.tankDrive(-.3,-.3); 
-            //autolevelingage = !autolevelingage;}
-            //else if (20.5>= m_gyro.getYComplementaryAngle() && m_gyro.getYComplementaryAngle() >= 10.5) 
-           // { tankDrive.tankDrive(-.35,-.35); 
-            // autolevelingage = !autolevelingage;} 
-            // else if (-20.5<= m_gyro.getYComplementaryAngle() && m_gyro.getYComplementaryAngle() <= -10.5) 
-            // { tankDrive.tankDrive(.4,.4);  
-             // autolevelingage = !autolevelingage;}
-              
-            //else if (-40.5<= m_gyro.getYComplementaryAngle() && m_gyro.getYComplementaryAngle() <= -3.5) {  
-             // tankDrive.tankDrive(.3,.3); 
-            //autolevelingage = !autolevelingage;}
-           // else if (-7.5<m_gyro.getYComplementaryAngle()){ tankDrive.tankDrive(-.7,-.7); 
-            //  autolevelingage = !autolevelingage;}
-             // else if (10000< m_gyro.getYComplementaryAngle()&& m_gyro.getYComplementaryAngle()<100000)
-             //   {tankDrive.tankDrive(0,0);
-              //chargelevel = !chargelevel; }
-             // SmartDashboard.putNumber("robotangle", m_gyro.getYComplementaryAngle());
-              //SmartDashboard.putNumber("turnangle", m_gyro.getAngle());
-            }
             SmartDashboard.putData("PDP", m_pdp);
             SmartDashboard.putNumber("tilt angle", m_gyro.getYComplementaryAngle());
             SmartDashboard.putNumber("voltage",m_pdp.getVoltage());
